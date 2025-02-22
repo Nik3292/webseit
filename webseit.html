@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы программирования</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .hero-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .hero-button {
+            background-color: white;
+            color: #2c3e50;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .hero-button:hover {
+            background-color: #e0e0e0;
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            margin: 40px 0;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .course-card, .benefit-card, .testimonial-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .course-card:hover, .benefit-card:hover, .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .course-card h3, .benefit-card h3, .testimonial-card h3 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .course-card p, .benefit-card p, .testimonial-card p {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .course-price, .benefit-title {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .buy-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        .buy-button:hover {
+            background-color: #c0392b;
+        }
+        .benefits-grid, .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="container">
+            <h1>Станьте успешным программистом с нашей онлайн-платформой</h1>
+            <p>Получите востребованные навыки, создайте портфолио и начните карьеру в разработке программного обеспечения.</p>
+            <div class="hero-buttons">
+                <button class="hero-button">Узнать больше</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2>Наши курсы программирования</h2>
+        <div class="course-card">
+            <h3>Продвинутый курс по программированию</h3>
+            <p class="course-price">10 000 р.</p>
+            <button class="buy-button">Купить сейчас</button>
+            <p>Откройте для себя продвинутые концепции программирования и станьте профессионалом в своей области.</p>
+        </div>
+        <div class="course-card">
+            <h3>Курсы HTML</h3>
+            <p class="course-price">15 000 р. / 20 000 р.</p>
+            <button class="buy-button">Купить сейчас</button>
+            <p>HTML — язык гипертекстовой разметки для создания веб-страниц, сайтов и приложений. Знание HTML востребовано и расширяет возможности в веб-программировании.</p>
+            <p><strong>Кому нужно обучение</strong></p>
+            <p>Веб-верстальщикам, контент-менеджерам, веб-мастерам или веб-дизайнерам. Курсы полезны для начинающих и интересующихся HTML.</p>
+            <p><strong>Чему Вы научитесь</strong></p>
+            <p>Освойте профессию веб-верстальщика, создайте портфолио, научитесь стандартам W3C и кроссбраузерной верстке.</p>
+            <p><strong>Что Вы получите</strong></p>
+            <p>Диплом, записи занятий, консультации по трудоустройству и рекомендации по поиску работы.</p>
+        </div>
+        <div class="course-card">
+            <h3>Курс «Python-разработчик»</h3>
+            <p class="course-price">10 000 р. / 25 000 р.</p>
+            <button class="buy-button">Купить сейчас</button>
+            <p>Углублённый Python, алгоритмы, бэкенд на Django, API, управление проектами и асинхронность с Flask за 43 недели.</p>
+        </div>
+        <div class="course-card">
+            <h3>Блок курсов по программированию</h3>
+            <p class="course-price">50 000 р. / 80 000 р.</p>
+            <button class="buy-button">Купить сейчас</button>
+            <p>Освойте C++ или фронтенд-разработку за 9 месяцев. Практика, реальный опыт, дизайн, JavaScript, React и тестирование.</p>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2>Почему стоит выбрать нас</h2>
+        <p>Почувствуйте разницу с нашим уникальным подходом к обучению — эффективно и увлекательно.</p>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Практический опыт</h3>
+                <p>Упор на практику для уверенного применения знаний.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Опытные инструкторы</h3>
+                <p>Профессионалы, готовые поделиться опытом.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Поддержка</h3>
+                <p>Сообщество единомышленников на каждом этапе.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2>Как проходит обучение</h2>
+        <ol>
+            <li>Зачисление — помощь с документами и регистрацией.</li>
+            <li>Обучение — опытные преподаватели проведут вас через этапы.</li>
+            <li>Выпуск — диплом или сертификат по окончании.</li>
+        </ol>
+    </div>
+
+    <div class="container section">
+        <h2>Преимущества</h2>
+        <p>Качественное обучение по доступным ценам.</p>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Индивидуальный подход</h3>
+                <p>Программы адаптированы под ваши цели.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Практика</h3>
+                <p>Реальный опыт над проектами для трудоустройства.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Цены</h3>
+                <p>От 10 000 р. — доступно для всех.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2>Отзывы студентов</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>«Курсы помогли мне приобрести навыки и применить их на практике. Рекомендую!»</p>
+                <p><strong>Ольга Кузнецова</strong><br>Дизайнер интерьеров</p>
+            </div>
+            <div class="testimonial-card">
+                <p>«Обучение дало уверенность и новые знания для повышения.»</p>
+                <p><strong>Анна Смирнова</strong><br>Специалист по маркетингу</p>
+            </div>
+            <div class="testimonial-card">
+                <p>«Интенсивное, но полезное обучение, соответствующее моим целям.»</p>
+                <p><strong>Иван Петров</strong><br>Инженер-программист</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container section">
+        <h2>Начните свой путь к успеху</h2>
+        <p>Получите знания и навыки для достижения целей в жизни и карьере.</p>
+    </div>
+
+    <div class="contact-section">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <div>
+                    <p><strong>Телефоны</strong></p>
+                    <p>Частным лицам: +79237623735</p>
+                    <p>Слушателям от организаций: +79237623735</p>
+                </div>
+                <div>
+                    <p><strong>WhatsApp</strong></p>
+                    <p>+79237623735</p>
+                </div>
+                <div>
+                    <p><strong>E-mail</strong></p>
+                    <p>ser.maslov@bk.ru</p>
+                </div>
+            </div>
+            <p><strong>ИП Маслов Владислав Олегович</strong><br>ИНН: 550307283273<br>ОГРН: 325554300013617<br>Юридический адрес: Г. Омск, ул. 24 Северная, 194<br></p>
+        </div>
+    </div>
+
+    <script>
+        // Scroll-Animation für Sektionen
+        const sections = document.querySelectorAll('.section');
+        
+        window.addEventListener('scroll', () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
